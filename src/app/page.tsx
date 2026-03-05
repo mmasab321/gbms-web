@@ -244,10 +244,9 @@ function Hero() {
                 </div>
             </div>
           </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
   );
 }
 
@@ -310,8 +309,8 @@ function TrustedBy() {
         </div>
 
         {/* Cinematic Gradient overlays */}
-        <div className="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-[#020617] via-[#020617]/80 to-transparent z-20" />
-        <div className="absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-[#020617] via-[#020617]/80 to-transparent z-20" />
+        <div className="absolute inset-y-0 left-0 w-24 lg:w-64 bg-gradient-to-r from-[#020617] via-[#020617]/80 to-transparent z-20" />
+        <div className="absolute inset-y-0 right-0 w-24 lg:w-64 bg-gradient-to-l from-[#020617] via-[#020617]/80 to-transparent z-20" />
       </div>
     </section>
   );
@@ -339,9 +338,9 @@ function Stats() {
   ];
 
   return (
-    <section className="py-24 bg-white border-b border-slate-50">
+    <section className="py-24 bg-white border-b border-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12">
           {stats.map((stat, i) => (
             <div
               key={i}
@@ -1079,7 +1078,7 @@ function Footer() {
 /* ─── Main Page ─── */
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white font-inter selection:bg-navy-900 selection:text-white">
+    <main className="min-h-screen w-full bg-white font-inter selection:bg-navy-900 selection:text-white overflow-x-hidden relative">
       <Navbar />
       <Hero />
       <TrustedBy />
