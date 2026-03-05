@@ -19,9 +19,9 @@ const config: Config = {
           400: "#748ffc",
           500: "#5c7cfa",
           600: "#4c6ef5",
-          700: "#0A2540",
-          800: "#071e33",
-          900: "#051726",
+          700: "#003366",
+          800: "#002a54",
+          900: "#001f3f",
         },
         accent: {
           DEFAULT: "#0066FF",
@@ -34,13 +34,15 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-geist-mono)", "monospace"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        serif: ["var(--font-inter)", "sans-serif"], // Force sans-serif even for serif classes to match screenshot
+        mono: ["var(--font-mono)", "JetBrains Mono", "monospace"],
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out forwards",
         "slide-up": "slideUp 0.6s ease-out forwards",
         "float": "float 6s ease-in-out infinite",
+        "marquee": "marquee var(--duration, 40s) linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -54,6 +56,10 @@ const config: Config = {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
+        },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
         },
       },
     },
