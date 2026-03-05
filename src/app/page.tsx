@@ -121,11 +121,11 @@ function Hero() {
               Enterprise Resource Planning
             </p>
 
-            <h1 className="text-5xl lg:text-[72px] font-sans text-navy-900 font-bold leading-[1.05] tracking-[-0.03em] mb-10">
+            <h1 className="text-4xl lg:text-[72px] font-sans text-navy-900 font-bold leading-[1.05] tracking-[-0.03em] mb-10">
               Pakistan&apos;s first locally developed ERP software
             </h1>
 
-            <p className="text-xl text-slate-500 leading-relaxed mb-12 max-w-xl">
+            <p className="text-lg lg:text-xl text-slate-500 leading-relaxed mb-12 max-w-xl">
               Built for how Pakistani businesses actually work. FBR-compliant invoicing, multi-company support, and Urdu-language reporting — from a team that&apos;s been doing this since 2013.
             </p>
 
@@ -174,37 +174,37 @@ function Hero() {
                   <button className="bg-navy-900 text-white text-[9px] font-bold uppercase tracking-widest px-4 py-2 rounded-sm">Export PDF</button>
                 </div>
 
-                <div className="overflow-x-auto -mx-2 px-2 pb-2 scrollbar-hide">
-                  <div className="min-w-[500px]">
-                    <div className="grid grid-cols-4 text-[11px] uppercase tracking-wider font-bold text-navy-900 py-3 border-b border-navy-900 mb-0">
-                      <span>Account Code</span>
-                      <span>Account Name</span>
-                      <span className="text-right">Debit (PKR)</span>
-                      <span className="text-right">Credit (PKR)</span>
-                    </div>
-
-                    {[
-                      { code: "1001", name: "Cash in Hand", d: "2,340,000", c: "" },
-                      { code: "1002", name: "HBL Current A/C", d: "14,821,500", c: "" },
-                      { code: "2001", name: "Accounts Payable", d: "", c: "8,450,200" },
-                      { code: "3001", name: "Sales Revenue", d: "", c: "42,180,000" },
-                      { code: "4001", name: "Salary Expense", d: "18,640,000", c: "" },
-                      { code: "4005", name: "GST Output Tax", d: "", c: "7,170,600" },
-                    ].map((row, i) => (
-                      <div key={i} className="grid grid-cols-4 text-[11px] font-medium py-3 border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors">
-                        <span className="text-slate-400 font-mono text-[10px] tracking-widest">{row.code}</span>
-                        <span className="text-navy-900 font-sans">{row.name}</span>
-                        <span className="text-right text-navy-900 font-mono tracking-tight">{row.d || "—"}</span>
-                        <span className="text-right text-navy-900 font-mono tracking-tight">{row.c || "—"}</span>
+                <div className="relative overflow-hidden w-full">
+                  <div className="overflow-x-auto pb-4 scrollbar-hide w-full">
+                    <div className="min-w-[500px] w-full">
+                      <div className="grid grid-cols-4 text-[11px] uppercase tracking-wider font-bold text-navy-900 py-3 border-b border-navy-900 mb-0">
+                        <span>Account Code</span>
+                        <span>Account Name</span>
+                        <span className="text-right">Debit (PKR)</span>
+                        <span className="text-right">Credit (PKR)</span>
                       </div>
-                    ))}
 
-                    <div className="grid grid-cols-4 text-[12px] font-bold text-navy-900 py-4 border-t-2 border-navy-900 mt-0">
-                      <span className="col-span-2 uppercase tracking-wide">Total</span>
-                      <span className="text-right font-mono text-[13px]">35,801,500</span>
-                      <span className="text-right font-mono text-[13px]">57,800,800</span>
-                    </div>
-                  </div>
+                      {[
+                        { code: "1001", name: "Cash in Hand", d: "2,340,000", c: "" },
+                        { code: "1002", name: "HBL Current A/C", d: "14,821,500", c: "" },
+                        { code: "2001", name: "Accounts Payable", d: "", c: "8,450,200" },
+                        { code: "3001", name: "Sales Revenue", d: "", c: "42,180,000" },
+                        { code: "4001", name: "Salary Expense", d: "18,640,000", c: "" },
+                        { code: "4005", name: "GST Output Tax", d: "", c: "7,170,600" },
+                      ].map((row, i) => (
+                        <div key={i} className="grid grid-cols-4 text-[11px] font-medium py-3 border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors">
+                          <span className="text-slate-400 font-mono text-[10px] tracking-widest">{row.code}</span>
+                          <span className="text-navy-900 font-sans">{row.name}</span>
+                          <span className="text-right text-navy-900 font-mono tracking-tight">{row.d || "—"}</span>
+                          <span className="text-right text-navy-900 font-mono tracking-tight">{row.c || "—"}</span>
+                        </div>
+                      ))}
+
+                      <div className="grid grid-cols-4 text-[12px] font-bold text-navy-900 py-4 border-t-2 border-navy-900 mt-0">
+                        <span className="col-span-2 uppercase tracking-wide">Total</span>
+                        <span className="text-right font-mono text-[13px]">35,801,500</span>
+                        <span className="text-right font-mono text-[13px]">57,800,800</span>
+                      </div>
                 </div>
               </div>
             </div>
@@ -235,21 +235,21 @@ function TrustedBy() {
         </p>
       </div>
 
-      <div className="relative z-10 flex [--gap:20rem] [--duration:60s] select-none overflow-hidden pb-12">
-        <div className="flex shrink-0 justify-around gap-[var(--gap)] min-w-full animate-marquee">
+      <div className="relative z-10 flex [--gap:4rem] lg:[--gap:20rem] [--duration:20s] lg:[--duration:60s] select-none overflow-hidden pb-12">
+        <div className="flex shrink-0 justify-around gap-[var(--gap)] min-w-full animate-marquee items-center">
           {/* First Set of Unique Logos */}
           <div className="flex shrink-0 justify-around gap-[var(--gap)] items-center">
             {logos.map((logo, i) => (
               <div
                 key={`unique-${i}`}
-                className="opacity-40 hover:opacity-100 transition-all duration-700 cursor-default px-8 transform hover:scale-110 flex items-center justify-center grayscale"
+                className="opacity-40 hover:opacity-100 transition-all duration-700 cursor-default px-4 lg:px-8 transform hover:scale-110 flex items-center justify-center grayscale shrink-0"
               >
                 <Image
                   src={logo.src}
                   alt={logo.name}
                   width={logo.w}
                   height={logo.h}
-                  className="h-10 w-auto object-contain block"
+                  className="h-8 lg:h-10 w-auto object-contain block"
                 />
               </div>
             ))}
@@ -259,14 +259,14 @@ function TrustedBy() {
             {logos.map((logo, i) => (
               <div
                 key={`loop-${i}`}
-                className="opacity-40 hover:opacity-100 transition-all duration-700 cursor-default px-8 transform hover:scale-110 flex items-center justify-center grayscale"
+                className="opacity-40 hover:opacity-100 transition-all duration-700 cursor-default px-4 lg:px-8 transform hover:scale-110 flex items-center justify-center grayscale shrink-0"
               >
                 <Image
                   src={logo.src}
                   alt={logo.name}
                   width={logo.w}
                   height={logo.h}
-                  className="h-10 w-auto object-contain block"
+                  className="h-8 lg:h-10 w-auto object-contain block"
                 />
               </div>
             ))}
@@ -561,31 +561,33 @@ function FBRSection() {
                 </div>
               </div>
 
-              <div className="overflow-x-auto -mx-2 px-2">
-                <table className="w-full min-w-[500px] text-left mb-12">
-                  <thead>
-                    <tr className="text-[9px] font-bold uppercase tracking-widest text-slate-400 border-b border-slate-100">
-                      <th className="pb-4">Item</th>
-                      <th className="pb-4 text-center">Qty</th>
-                      <th className="pb-4 text-center">Rate</th>
-                      <th className="pb-4 text-right">Amount</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-[11px] font-medium font-mono">
-                    <tr>
-                      <td className="py-4 font-sans font-medium text-navy-900">Industrial Bearings SKF-6205</td>
-                      <td className="py-4 text-center">500</td>
-                      <td className="py-4 text-center">3,200</td>
-                      <td className="py-4 text-right">1,600,000</td>
-                    </tr>
-                    <tr>
-                      <td className="py-4 font-sans font-medium text-navy-900">Lubricant Grease (50kg drum)</td>
-                      <td className="py-4 text-center">20</td>
-                      <td className="py-4 text-center">42,500</td>
-                      <td className="py-4 text-right">850,000</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div className="relative overflow-hidden w-full">
+                <div className="overflow-x-auto pb-4 w-full">
+                  <table className="w-full min-w-[500px] text-left mb-12">
+                    <thead>
+                      <tr className="text-[9px] font-bold uppercase tracking-widest text-slate-400 border-b border-slate-100">
+                        <th className="pb-4">Item</th>
+                        <th className="pb-4 text-center">Qty</th>
+                        <th className="pb-4 text-center">Rate</th>
+                        <th className="pb-4 text-right">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-[11px] font-medium font-mono">
+                      <tr>
+                        <td className="py-4 font-sans font-medium text-navy-900">Industrial Bearings SKF-6205</td>
+                        <td className="py-4 text-center">500</td>
+                        <td className="py-4 text-center">3,200</td>
+                        <td className="py-4 text-right">1,600,000</td>
+                      </tr>
+                      <tr>
+                        <td className="py-4 font-sans font-medium text-navy-900">Lubricant Grease (50kg drum)</td>
+                        <td className="py-4 text-center">20</td>
+                        <td className="py-4 text-center">42,500</td>
+                        <td className="py-4 text-right">850,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               <div className="flex justify-end border-t border-slate-100 pt-8">
@@ -603,8 +605,8 @@ function FBRSection() {
                     <span className="font-bold text-red-500">- PKR 110,250</span>
                   </div>
                   <div className="flex justify-between flex-wrap gap-2 text-lg pt-4 border-t-2 border-slate-900 font-sans tracking-tight">
-                    <span className="font-bold whitespace-nowrap">Total Payable</span>
-                    <span className="font-mono font-bold text-xl whitespace-nowrap">PKR 2,756,250</span>
+                    <span className="font-bold">Total Payable</span>
+                    <span className="font-mono font-bold text-xl text-right">PKR 2,756,250</span>
                   </div>
                 </div>
               </div>
