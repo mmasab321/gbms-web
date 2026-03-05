@@ -150,8 +150,8 @@ function Hero() {
             </p>
           </div>
 
-          {/* Right - ERP Dashboard Mockup */}
-          <div className="relative">
+          {/* Right - ERP Dashboard Mockup (Desktop) */}
+          <div className="relative hidden lg:block">
             <div className="bg-[#f0f4f8] border border-slate-200 rounded-lg shadow-2xl p-4 overflow-hidden">
               {/* Window Top Bar */}
               <div className="flex items-center justify-between mb-4 px-2">
@@ -205,11 +205,45 @@ function Hero() {
                         <span className="text-right font-mono text-[13px]">35,801,500</span>
                         <span className="text-right font-mono text-[13px]">57,800,800</span>
                       </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+
+          {/* ERP Dashboard Mockup (Mobile) */}
+          <div className="relative block lg:hidden">
+            <div className="bg-white border border-slate-200 rounded-lg shadow-xl p-5 overflow-hidden">
+                <div className="flex items-center justify-between mb-6 border-b border-slate-100 pb-4">
+                  <h3 className="text-sm font-sans font-bold text-navy-900 uppercase tracking-widest">Financial Ledger</h3>
+                  <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
+                    <div className="w-4 h-0.5 bg-navy-900 relative after:absolute after:w-4 after:h-0.5 after:bg-navy-900 after:top-1 before:absolute before:w-4 before:h-0.5 before:bg-navy-900 before:-top-1" />
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  {[
+                    { name: "Cash Assets", val: "17,161,500", type: "Asset" },
+                    { name: "Sales Revenue", val: "42,180,000", type: "Revenue" },
+                    { name: "Accounts Payable", val: "8,450,200", type: "Liability" },
+                  ].map((item, i) => (
+                    <div key={i} className="flex justify-between items-center p-3 bg-slate-50 rounded-sm">
+                      <div>
+                        <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-1">{item.type}</p>
+                        <p className="font-bold text-sm text-navy-900">{item.name}</p>
+                      </div>
+                      <p className="font-mono font-bold text-sm text-navy-900">{item.val}</p>
+                    </div>
+                  ))}
+                  
+                  <div className="pt-4 mt-6 border-t-2 border-navy-900 flex justify-between items-center">
+                    <span className="font-bold text-navy-900 uppercase tracking-widest text-xs">Net Balance</span>
+                    <span className="font-mono font-bold text-lg text-navy-900">PKR 93,602,300</span>
+                  </div>
+                </div>
+            </div>
+          </div>
       </div>
     </div>
   </div>
@@ -536,8 +570,8 @@ function FBRSection() {
             </a>
           </div>
 
-          {/* Tax Invoice Mockup */}
-          <div className="relative">
+          {/* Tax Invoice Mockup (Desktop) */}
+          <div className="relative hidden lg:block">
             <div className="bg-white rounded-sm p-8 text-navy-900 shadow-2xl">
               <div className="flex justify-between items-start mb-12 border-b border-slate-100 pb-6">
                 <div>
@@ -618,6 +652,40 @@ function FBRSection() {
                 <p className="text-[9px] font-mono text-slate-400 leading-relaxed">
                   FBR Invoice No: FBR-2024-PK-00482139 | Status: Transmitted | Timestamp: 2024-12-12T14:32:08+05:00
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Tax Invoice Mockup (Mobile) */}
+          <div className="relative block lg:hidden">
+            <div className="bg-white rounded-lg p-6 text-navy-900 shadow-xl border border-slate-100">
+              <div className="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
+                <h3 className="text-lg font-bold">INV-2024-0048</h3>
+                <span className="text-[9px] font-bold bg-green-50 text-green-700 px-2 py-1 rounded-full uppercase tracking-widest">Live: FBR</span>
+              </div>
+              
+              <div className="space-y-6">
+                <div>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Company</p>
+                  <p className="font-bold text-sm">Continental Enterprises</p>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center border-b border-slate-50 pb-2">
+                    <span className="text-[11px] text-slate-500">GST (17%)</span>
+                    <span className="font-bold text-[11px]">PKR 416,500</span>
+                  </div>
+                  <div className="flex justify-between items-center bg-navy-900 text-white p-4 rounded-sm">
+                    <span className="text-xs uppercase tracking-widest font-bold">Total Amount</span>
+                    <span className="font-mono font-bold text-lg">2.75M</span>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                   <p className="text-[9px] font-mono text-slate-400 break-all leading-tight">
+                    Ref: FBR-2024-PK-MSB-00482139
+                   </p>
+                </div>
               </div>
             </div>
           </div>
