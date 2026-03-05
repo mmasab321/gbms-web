@@ -216,10 +216,10 @@ function Hero() {
 /* ─── Trusted By Section (Cinematic Strip) ─── */
 function TrustedBy() {
   const logos = [
-    { name: "Maple Leaf", src: "/logos/maple-leaf.png", h: "h-10" },
-    { name: "Fauji Cement", src: "/logos/fauji-cement.png", h: "h-12" },
-    { name: "Continental", src: "/logos/continental.png", h: "h-9" },
-    { name: "National Foods", src: "/logos/nfl-logo.png", h: "h-10" },
+    { name: "Maple Leaf", src: "/logos/maple-leaf.png", w: 120, h: 48 },
+    { name: "Fauji Cement", src: "/logos/fauji-cement.png", w: 100, h: 60 },
+    { name: "Continental", src: "/logos/continental.png", w: 140, h: 40 },
+    { name: "National Foods", src: "/logos/nfl-logo.png", w: 100, h: 48 },
   ];
 
   return (
@@ -242,14 +242,13 @@ function TrustedBy() {
                 key={`unique-${i}`}
                 className="opacity-40 hover:opacity-100 transition-all duration-700 cursor-default px-8 transform hover:scale-110 flex items-center justify-center grayscale"
               >
-                <div className={`${logo.h} relative w-32`}>
-                  <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    fill
-                    className="object-contain block"
-                  />
-                </div>
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={logo.w}
+                  height={logo.h}
+                  className="h-10 w-auto object-contain block"
+                />
               </div>
             ))}
           </div>
@@ -260,14 +259,13 @@ function TrustedBy() {
                 key={`loop-${i}`}
                 className="opacity-40 hover:opacity-100 transition-all duration-700 cursor-default px-8 transform hover:scale-110 flex items-center justify-center grayscale"
               >
-                <div className={`${logo.h} relative w-32`}>
-                  <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    fill
-                    className="object-contain block"
-                  />
-                </div>
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={logo.w}
+                  height={logo.h}
+                  className="h-10 w-auto object-contain block"
+                />
               </div>
             ))}
           </div>
