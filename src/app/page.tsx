@@ -1,18 +1,14 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   Menu,
   X,
   ArrowRight,
-  CheckCircle2,
   Phone,
   Mail,
   MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
 } from "lucide-react";
 
 
@@ -246,11 +242,14 @@ function TrustedBy() {
                 key={`unique-${i}`}
                 className="opacity-40 hover:opacity-100 transition-all duration-700 cursor-default px-8 transform hover:scale-110 flex items-center justify-center grayscale"
               >
-                <img
-                  src={logo.src}
-                  alt={logo.name}
-                  className={`${logo.h} w-auto object-contain block`}
-                />
+                <div className={`${logo.h} relative w-32`}>
+                  <Image
+                    src={logo.src}
+                    alt={logo.name}
+                    fill
+                    className="object-contain block"
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -261,11 +260,14 @@ function TrustedBy() {
                 key={`loop-${i}`}
                 className="opacity-40 hover:opacity-100 transition-all duration-700 cursor-default px-8 transform hover:scale-110 flex items-center justify-center grayscale"
               >
-                <img
-                  src={logo.src}
-                  alt={logo.name}
-                  className={`${logo.h} w-auto object-contain block`}
-                />
+                <div className={`${logo.h} relative w-32`}>
+                  <Image
+                    src={logo.src}
+                    alt={logo.name}
+                    fill
+                    className="object-contain block"
+                  />
+                </div>
               </div>
             ))}
           </div>
